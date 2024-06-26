@@ -1,0 +1,81 @@
+/*
+Font
+.roboto-slab-<uniquifier> {
+  font-family: "Roboto Slab", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  .teko-<uniquifier> {
+  font-family: "Teko", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  }
+
+} */
+.russo-one-regular {
+  font-family: "Russo One", sans-serif;
+  font-size: 50px;
+  font-style: normal;
+}
+.cont {
+  display: flex;
+}
+.cont-uno {
+  width: 350px;
+  height: 400px;
+  background-color: #ccc;
+  align-items: center;
+  box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.3),
+    1px 1px 10px 0px rgba(0, 0, 0, 0.2), 1px 1px 10px 0px rgba(0, 0, 0, 0.1);
+  user-select: none;
+}
+
+.cont-dos {
+  background-color: #333;
+  margin-left: 50px;
+  color: #fff;
+  height: 80px;
+  margin: 20px;
+  padding: 5px;
+}
+.user {
+  font-family: "Roboto Slab", serif;
+  font-size: 3rem;
+  text-align: center;
+  user-select: none;
+  height: 65px;
+}
+
+.btn {
+  background-color: #f90;
+  font-family: "Teko", sans-serif;
+  font-size: 25px;
+  height: 50px;
+  width: 200px;
+  box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.2);
+  transition: all 0.5s ease;
+}
+
+.btn:hover {
+  background-color: #f40;
+  box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, 0.3);
+}
+
+.text {
+  user-select: none;
+}
+
+.form {
+  width: 300px;
+}
+
+.ingresar {
+  font-family: "Teko", sans-serif;
+  color: #ddd;
+}
+
+.ingresar-input {
+  font-family: "Teko", sans-serif;
+  font-size: 20px;
+}

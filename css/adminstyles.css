@@ -1,0 +1,35 @@
+/*
+.oswald-<uniquifier> {
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+.lobster-regular {
+  font-family: "Lobster", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+} */
+* {
+  user-select: none;
+}
+.navbar-toggler {
+  width: 35px;
+  height: 35px;
+  padding: 0;
+}
+.navbar-toggler-icon {
+  width: 25px;
+  height: 30px;
+  margin: 0;
+}
+
+.mt-5 {
+  margin-top: 450px;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+}
