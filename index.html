@@ -57,8 +57,10 @@
                 class="p-2 mt-8 rounded-xl border text-[#F3794E] w-full"
               />
               <i
-                class="fa-regular fa-eye absolute top-1/2 right-3 translate-y-1/2"
+                id="cambioClave"
+                class="fa-regular fa-eye absolute top-1/2 right-3 translate-y-1/2 z-10"
                 viewBox="0 0 16 16"
+                onclick="cambioClave()"
               ></i>
             </div>
             <button
@@ -74,6 +76,7 @@
         <!-- imagen -->
         <div class="sm:block hidden w-1/2">
           <img
+            id="imagen"
             onclick="cambio()"
             class="rounded-2xl"
             src="src/fruver.jpg"
