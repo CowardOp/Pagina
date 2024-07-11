@@ -32,11 +32,11 @@
     <section class="bg-gray-50 min-h-screen flex items-center justify-center">
       <!-- Contenedor Inicio de sesion -->
       <div
-        class="bg-gray-100 flex rounded-2xl shadow-lg max-w-3xl p-3 items-center justify-center"
+        class="trans bg-gray-100 flex rounded-2xl shadow-lg max-w-3xl p-3 items-center justify-center"
         id="imagen"
       >
         <!-- forms -->
-        <div class="sm:w-1/2 px-12" id="formInicio">
+        <div class="sm:w-1/2 px-12">
           <h1 class="font-bold text-2xl">Inico de Sesión</h1>
           <p class="text-sm mt-3">Ingrese Usuario y Contraseña</p>
 
@@ -64,8 +64,6 @@
               ></i>
             </div>
             <button
-              id="iniciado"
-              onclick="iniciarSesion()"
               class="bg-[#F3794E] text-white rounded-xl py-2 mt-3 hover:bg-[#E07149] hover:scale-105 duration-300"
             >
               Iniciar Sesión
@@ -74,7 +72,7 @@
           <a href="#" class="text-sm mt-1">Olvido su contraseña?</a>
         </div>
         <!-- imagen -->
-        <div class="sm:block hidden w-1/2">
+        <div class="trans sm:block hidden w-1/2">
           <img
             id="imagen"
             onclick="cambio()"
@@ -87,6 +85,6 @@
     </section>
 
     <footer></footer>
+    <script src="js/script.js"></script>
   </body>
-  <script src="js/script.js"></script>
 </html>
