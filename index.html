@@ -20,62 +20,64 @@
     />
     <!-- style -->
     <link rel="stylesheet" href="css/style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
 
   <body>
-    <div class="container-fluid cont">
-      <!-- inicio de sesión -->
-      <div class="cont-dos rounded">
-        <label class="russo-one-regular" style="user-select: none"
-          >SURTIFRUVER</label
-        >
-      </div>
-      <form
-        class="card position-absolute top-50 start-50 translate-middle p-2 cont-uno"
+    <header>
+      <nav class="absolute">
+        <h1 class="">SURTIFRUVER</h1>
+      </nav>
+    </header>
+    <section class="bg-gray-50 min-h-screen flex items-center justify-center">
+      <!-- Contenedor Inicio de sesion -->
+      <div
+        class="bg-gray-100 flex rounded-2xl shadow-lg max-w-3xl p-3 items-center justify-center"
       >
-        <!-- head -->
-        <div class="card imd-card user mx-1 mt-1 mb-4 p-1 pb-4">
-          <label>Iniciar Sesión</label>
-        </div>
-        <!-- inputs -->
-        <div class="input-group my-3 form">
-          <span class="input-group-text" style="user-select: none"
-            ><i class="fa-solid fa-user"></i
-          ></span>
-          <div class="form-floating">
-            <input
-              type="text"
-              class="form-control ingresar-input"
-              id="floatingInputGroup1"
-              placeholder="Username"
-            />
-            <label for="floatingInputGroup1" class="ingresar">Usuario</label>
-          </div>
-        </div>
-        <div class="input-group my-3 form">
-          <span class="input-group-text" style="user-select: none"
-            ><i class="fa-solid fa-lock"></i
-          ></span>
-          <div class="form-floating">
-            <input
-              type="text"
-              class="form-control ingresar-input"
-              id="floatingInputGroup1"
-              placeholder="Username"
-            />
-            <label for="floatingInputGroup1" class="ingresar">Contraseña</label>
-          </div>
-        </div>
-        <!-- boton -->
+        <!-- forms -->
+        <div class="sm:w-1/2 px-12" id="formInicio">
+          <h1 class="font-bold text-2xl">Inico de Sesión</h1>
+          <p class="text-sm mt-3">Ingrese Usuario y Contraseña</p>
 
-        <button class="btn mt-4 mx-3">Iniciar</button>
-      </form>
-    </div>
+          <form class="flex flex-col gap-4" onsubmit="inici">
+            <input
+              type="text"
+              name="usuario"
+              id="usuario"
+              placeholder="Usuario"
+              class="p-2 mt-8 rounded-xl border text-[#F3794E]"
+            />
+            <div class="relative">
+              <input
+                type="password"
+                name="clave"
+                id="clave"
+                placeholder="Contraseña"
+                class="p-2 mt-8 rounded-xl border text-[#F3794E] w-full"
+              />
+              <i
+                class="fa-regular fa-eye absolute top-1/2 right-3 translate-y-1/2"
+                viewBox="0 0 16 16"
+              ></i>
+            </div>
+            <button
+              id="iniciado"
+              onclick="iniciarSesion()"
+              class="bg-[#F3794E] text-white rounded-xl py-2 mt-3 hover:bg-[#E07149] hover:scale-105 duration-300"
+            >
+              Iniciar Sesión
+            </button>
+          </form>
+          <a href="#" class="text-sm mt-1">Olviso su contraseña?</a>
+        </div>
+        <!-- imagen -->
+        <div class="sm:block hidden w-1/2">
+          <img class="rounded-2xl" src="src/fruver.jpg" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <footer></footer>
   </body>
-  <script src="script"></script>
-  <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin="anonymous"
-  ></script>
+  <script src="js/script.js"></script>
 </html>
