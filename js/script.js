@@ -1,10 +1,8 @@
-function iniciarSesion() {
-  let usuario = document.getElementById("usuario").value;
-  let clave = document.getElementById("clave").value;
-
-  if (usuario === "brayan" && clave === "123456") {
-    window.location.href = "admin.html";
+let elemento = document.getElementById("imagen");
+function cambio() {
+  if (elemento.classList.contains("cambio")) {
+    elemento.classList.remove("cambio");
   } else {
-    alert("Usuario o Contraseña incorrectos");
+    elemento.classList.add("cambio");
   }
 }
