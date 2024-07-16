@@ -22,3 +22,13 @@ a {
 .opciones {
   transition: all 0.5s ease;
 }
+
+.titulos {
+  font-family: var(--open-sans);
+  font-weight: bolder;
+}
+
+.listas a {
+  font-family: var(--open-sans);
+  font-weight: 500;
+}
