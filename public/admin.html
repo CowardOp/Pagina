@@ -10,107 +10,88 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     />
     <!-- Tailwind -->
-    <script src="https://cdn.tailwindcss.com"></script>
+   
 
     <!-- icono -->
-    <link rel="icon" href="src/frutas.png" type="image/x-icon" />
+    <link rel="icon" href="../src/img/frutas.png" type="image/x-icon" />
 
     <!-- style -->
     <link rel="stylesheet" href="../css/adminstyles.css" />
+    <link rel="stylesheet" href="../src/css/main.css">
   </head>
   <body>
-    <header class="py-2 px-2">
-      <nav class="bg-gray-800 px-3 rounded-2xl">
-        <div class="text-white flex gap-1 flex justify-between flex-grow">
-          <i
-            class="fa-sharp fa-solid fa-lemon hover:text-lime-400 opciones text-2xl ms-3"
-          ></i>
-
-          <div class="w-auto flex">
-            <div class="flex w-auto justify-center">
-              <a
-                class="text-xl px-4 pt-0.5 hover:bg-slate-200 hover:text-gray-800 opciones"
-                href="#"
-                >Inicio</a
-              >
-              <a
-                class="text-xl px-4 pt-0.5 hover:bg-slate-200 hover:text-gray-800 opciones"
-                href="#"
-                >Configuracion</a
-              >
-              <a
-                class="text-xl px-4 pt-0.5 hover:bg-slate-200 hover:text-gray-800 opciones"
-                href="#"
-                >Salir</a
-              >
-            </div>
-            <div class="flex">
-              <img
-                onclick="desplegarOpciones()"
-                src="../src/user.png"
-                alt=""
-                class="w-14 ms-8"
+    <div class="navbar bg-base-100">
+      <div class="navbar-start">
+        <div class="dropdown">
+          <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h7"
               />
-              <div
-                id="opciones"
-                class="flex flex-col absolute hidden top-11 right-9"
-              >
-                <a
-                  class="border border-black text-black bg-[#DCE5E8] p-px ps-1 w-20 mt-px hover:bg-gray-800 hover:text-white opciones"
-                  href="#"
-                  >Ajustes</a
-                >
-                <a
-                  class="border border-black text-black bg-[#DCE5E8] p-px ps-1 w-20 hover:bg-gray-800 hover:text-white opciones"
-                  href="#"
-                  >Perfil</a
-                >
-                <a
-                  class="border border-black text-black bg-[#DCE5E8] p-px ps-1 w-20 hover:bg-gray-800 hover:text-white opciones"
-                  href="#"
-                  >Salir</a
-                >
-              </div>
-            </div>
+            </svg>
           </div>
-        </div>
-      </nav>
-    </header>
-    <section class="flex align-center justify-center h-[800px]">
-      <div class="flex gap-32 items-center">
-        <div
-          class="px-2 pt-1 w-[350px] h-[400px] bg-gray-200 m-2 rounded-xl shadow-lg"
-        >
-          <h1 class="text-2xl titulos">Titulo</h1>
-          <ul class="mt-2 ms-3 text-m">
-            <li class="text-m listas"><a href="">Lista</a></li>
-            <li class="text-m listas"><a href="">Lista</a></li>
-            <li class="text-m listas"><a href="">Lista</a></li>
-          </ul>
-        </div>
-        <div
-          class="px-2 pt-1 w-[350px] h-[400px] bg-gray-200 m-2 rounded-xl shadow-lg"
-        >
-          <h1 class="text-2xl titulos">Titulo</h1>
-          <ul class="mt-2 ms-3 text-m">
-            <li class="text-m listas"><a href="">Lista</a></li>
-            <li class="text-m listas"><a href="">Lista</a></li>
-            <li class="text-m listas"><a href="">Lista</a></li>
-          </ul>
-        </div>
-        <div
-          class="px-2 pt-1 w-[350px] h-[400px] bg-gray-200 m-2 rounded-xl shadow-lg"
-        >
-          <h1 class="text-2xl titulos">Titulo</h1>
-          <ul class="mt-2 ms-3 text-m">
-            <li class="text-m listas"><a href="">Lista</a></li>
-            <li class="text-m listas"><a href="">Lista</a></li>
-            <li class="text-m listas"><a href="">Lista</a></li>
+          <ul
+            tabindex="0"
+            class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+          >
+            <li><a>Homepage</a></li>
+            <li><a>Portfolio</a></li>
+            <li><a>About</a></li>
           </ul>
         </div>
       </div>
-    </section>
+      <div class="navbar-center">
+        <a class="btn btn-ghost text-xl">daisyUI</a>
+      </div>
+      <div class="navbar-end">
+        <button class="btn btn-ghost btn-circle">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-5 w-5"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+            />
+          </svg>
+        </button>
+        <button class="btn btn-ghost btn-circle">
+          <div class="indicator">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"
+              />
+            </svg>
+            <span class="badge badge-xs badge-primary indicator-item"></span>
+          </div>
+        </button>
+      </div>
+    </div>
+    <main></main>
     <footer></footer>
   </body>
-  <script src="../js/admin.js"></script>
+  <script src="../public/"></script>
 </html>
