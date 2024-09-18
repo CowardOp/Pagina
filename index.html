@@ -25,12 +25,17 @@
 
   <body>
     <header>
-      <nav class="absolute pt-2 pl-5">
+      <nav class="w-full pt-2 pl-5">
         <h1 class="titulo text-7xl absolute">SURTIFRUVER</h1>
-        <div class="nabvar-end">
+        <div class="absolute right-10">
           <label class="swap swap-rotate">
             <!-- this hidden checkbox controls the state -->
-            <input type="checkbox" class="theme-controller" value="synthwave" />
+            <input
+              id="cambioTema"
+              type="checkbox"
+              class="theme-controller"
+              value="synthwave"
+            />
 
             <!-- sun icon -->
             <svg
@@ -74,7 +79,7 @@
               name="usuario"
               id="usuario"
               placeholder="Usuario"
-              class="input input-bordered input-warning w-full max-w-xs bg-white"
+              class="usuario input input-bordered input-warning w-full max-w-xs"
               required
             />
             <div class="relative">
@@ -83,7 +88,7 @@
                 name="clave"
                 id="clave"
                 placeholder="Contraseña"
-                class="input input-bordered input-warning w-full max-w-xs bg-white"
+                class="input input-bordered input-warning w-full max-w-xs"
               />
             </div>
             <button

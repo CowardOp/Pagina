@@ -33,3 +33,12 @@ div {
 .trans {
   transition: all 0.5s ease;
 }
+.usuario {
+  transition: background-color 0.3s linear, color 0.3s linear;
+}
+/* Estilos básicos para los temas */
+
+.usuario.dark-theme {
+  background-color: black;
+  color: white;
+}
