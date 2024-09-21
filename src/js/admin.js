@@ -1,5 +1,11 @@
-function desplegarOpciones() {
-  let opciones = document.getElementById("opciones");
+const getElement = (idElement) => {
+  return document.getElementById(idElement);
+};
 
-  opciones.classList.toggle("hidden");
-}
+const buttonBarra = getElement("buttonBarra");
+const barraLateral = getElement("barraLateral");
+
+buttonBarra.addEventListener("click", () => {
+  barraLateral.classList.toggle("show");
+  buttonBarra.classList.toggle("show");
+});

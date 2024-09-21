@@ -15,7 +15,7 @@
     <link rel="icon" href="../src/img/frutas.png" type="image/x-icon" />
 
     <!-- style -->
-    <link rel="stylesheet" href="../css/adminstyles.css" />
+    <link rel="stylesheet" href="../src/css/adminstyle.css" />
     <link rel="stylesheet" href="../src/css/main.css" />
   </head>
   <body>
@@ -88,8 +88,38 @@
         </button>
       </div>
     </div>
-    <main></main>
+    <main>
+      <aside id="barraLateral" class="barra_lateral">
+        <button id="buttonBarra" class="button_menu">
+          <i class="fa-solid fa-caret-down"></i>
+        </button>
+        <div class="encabezado">
+          <h1>Menu Principal</h1>
+        </div>
+        <div class="acordeon">
+          <div class="bloque">
+            <h2 class="tiulo">Configuaración</h2>
+            <div class="contenido">
+              <ul class="contenido_lista">
+                <li class="contenido_button"><button>Configuración</button></li>
+              </ul>
+            </div>
+          </div>
+          <div class="bloque">
+            <h2 class="tiulo">Gestio de Productos</h2>
+            <div class="contenido">
+              <ul class="contenido_lista">
+                <li class="contenido_button"><button>Agregar</button></li>
+                <li class="contenido_button"><button>Editar</button></li>
+                <li class="contenido_button"><button>Buscar</button></li>
+                <li class="contenido_button"><button>Eliminar</button></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </main>
     <footer></footer>
   </body>
-  <script src="../public/"></script>
+  <script src="../src/js/admin.js"></script>
 </html>
