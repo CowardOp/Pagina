@@ -31,31 +31,39 @@ titulo.forEach((cadaTitulo, i) => {
   });
 });
 
-const themeToggle = document.querySelector(".theme-controller");
-const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+// controlla tama oscuro o claro
 
-// Función para aplicar el tema según la preferencia del sistema
-function applySystemTheme(e) {
-  if (e.matches) {
-    document.documentElement.setAttribute("data-theme", "dark");
-    themeToggle.checked = true;
-  } else {
-    document.documentElement.setAttribute("data-theme", "light");
-    themeToggle.checked = false;
-  }
-}
+const themeController = document.getElementById("themeController");
+const body = document.body;
 
-// Llama a la función al cargar la página
-applySystemTheme(mediaQuery);
-
-// Escucha cambios en el sistema
-mediaQuery.addEventListener("change", applySystemTheme);
-
-// Escucha cambios manuales con el checkbox
-themeToggle.addEventListener("change", function () {
+themeController.addEventListener("change", function () {
   if (this.checked) {
-    document.documentElement.setAttribute("data-theme", "dark");
+    body.classList.add("dark-mode");
   } else {
-    document.documentElement.setAttribute("data-theme", "light");
+    body.classList.remove("dark-mode");
   }
+});
+
+// controla la seccion que se muestra
+
+const buttons = document.querySelectorAll(".contenido_button button");
+let activeSection = null;
+
+buttons.forEach((button) => {
+  button.addEventListener("click", function () {
+    // Oculta la sección activa
+    if (activeSection) {
+      activeSection.classList.remove("mostrar");
+      activeSection.classList.add("ocultar");
+    }
+
+    // Muestra la nueva sección
+    const sectionId = button.getAttribute("data-section");
+    const newSection = document.getElementById(sectionId);
+    newSection.classList.remove("ocultar");
+    newSection.classList.add("mostrar");
+
+    // Actualiza la sección activa
+    activeSection = newSection;
+  });
 });

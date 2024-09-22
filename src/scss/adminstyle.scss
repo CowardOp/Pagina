@@ -1,116 +1,24 @@
-@import "imports/mixins", "imports/variables";
+@import "imports/mixins";
+@import "imports/variables";
+@import "imports/main";
+@import "imports/aside";
+@import "imports/acordeon";
+@import "imports/seccion";
 @import url("https://fonts.googleapis.com/css2?family=Carlito:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
-.barra_lateral {
-  padding: 10px 5px;
-  background-color: var(--blanco);
-  position: absolute;
-  right: 0px;
-  width: 300px;
-  height: 100%;
-  user-select: none;
+body {
+  height: 100vh;
+  background-color: var(--blanco-gris);
 
-  transition: all 0.2s linear;
+  transition: all 0.3s linear;
 }
-
-.barra_lateral.show {
-  transform: translateX(-300px);
-}
-.encabezado {
-  font-size: 2rem;
-  color: var(--negro);
-  font-weight: 500;
-  padding: 10px 5px;
-}
-.button_menu {
-  position: absolute;
-  width: 50px;
-  left: -50px;
-  font-size: 2rem;
-
-  transition: all 0.2s linear;
-}
-
-.button_menu:hover {
-  transform: scale(1.2);
-}
-
-.button_menu:active {
-  transform: scale(0.9);
-}
-
-.button_menu.show {
-  transform: rotate(-90deg);
-}
-.button_menu.show:hover {
-  transform: scale(1.1) rotate(-90deg);
-}
-.button_menu.show:active {
-  transform: scale(0.9);
-}
-
-.acordeon {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  padding: 15px 10px;
-  font-style: normal;
-  font-family: var(--tipo-principal);
-}
-.bloque {
-  padding: 5px 10px;
-  @include neo(1, 0.5rem, 0.4rem);
-}
-.titulo {
-  padding: 5px 15px;
-  font-weight: 700;
-  &:hover {
-    background-color: var(--negro);
-    color: var(--blanco);
-  }
-  &:active {
-    @include neo(1, 0.5rem, 0.1rem);
-  }
-  @include neo(1, 0.5rem, 0.4rem);
-}
-.contenido {
-  padding: 0;
-  height: 0;
-  overflow: hidden;
-
-  //   transition: var(--transition);
-  transition: all 0.5s linear;
-}
-
-.bloque.activo .contenido {
-  padding: 10px 0;
-  height: 11em;
-}
-.contenido_lista {
-  display: flex;
-  flex-direction: column;
-  gap: 5px 2px;
-  padding: 0 15px;
-}
-.contenido_button {
-  padding: 5px 10px;
-  font-weight: 500;
-  &:hover {
-    @include neo(1, 0.5rem, 0.4rem);
-  }
-  &:active {
-    @include neo(1, 0.5rem, 0.1rem);
-  }
-}
-
-/* Tema claro */
-[data-theme="light"] {
+.navbar {
   background-color: var(--blanco);
   color: var(--negro);
-}
 
-/* Tema oscuro */
-[data-theme="dark"] {
-  background-color: var(--negro);
-  color: var(--blanco);
+  transition: all 0.3s linear;
+  .menu {
+    background-color: var(--blanco);
+    color: var(--negro);
+  }
 }

@@ -15,11 +15,11 @@
     <link rel="icon" href="../src/img/frutas.png" type="image/x-icon" />
 
     <!-- style -->
-    <link rel="stylesheet" href="../src/scss/adminstyle.css" />
+    <link rel="stylesheet" href="../src/css/adminstyle.css" />
     <link rel="stylesheet" href="../src/css/main.css" />
   </head>
   <body>
-    <div class="navbar bg-base-100">
+    <div class="navbar">
       <div class="navbar-start">
         <div class="dropdown">
           <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
@@ -40,7 +40,7 @@
           </div>
           <ul
             tabindex="0"
-            class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+            class="menu menu-sm dropdown-content rounded-box z-[1] mt-3 w-52 p-2 shadow"
           >
             <label>Administrador</label>
             <li><a>Salir</a></li>
@@ -72,7 +72,12 @@
         </button>
         <label class="swap swap-rotate">
           <!-- this hidden checkbox controls the state -->
-          <input type="checkbox" class="theme-controller" value="synthwave" />
+          <input
+            type="checkbox"
+            id="themeController"
+            class="theme-controller"
+            value="synthwave"
+          />
 
           <!-- sun icon -->
           <svg
@@ -112,145 +117,303 @@
           <div class="contenido">
             <ul class="contenido_lista">
               <li class="contenido_button">
-                <button>Resumen de Ventas</button>
+                <button data-section="resumen-ventas">Resumen de Ventas</button>
               </li>
               <li class="contenido_button">
-                <button>Inventario Crítico</button>
+                <button data-section="inventario-critico">
+                  Inventario Crítico
+                </button>
               </li>
-              <li class="contenido_button"><button>Buscar</button></li>
               <li class="contenido_button">
-                <button>Últimas Actividades</button>
+                <button data-section="buscar">Buscar</button>
+              </li>
+              <li class="contenido_button">
+                <button data-section="ultimas-actividades">
+                  Últimas Actividades
+                </button>
               </li>
             </ul>
           </div>
         </div>
+
         <div class="bloque">
           <h2 class="titulo">Gestión de Productos</h2>
           <div class="contenido">
             <ul class="contenido_lista">
               <li class="contenido_button">
-                <button>Buscar Y Filtrat</button>
+                <button data-section="buscar-filtrar-productos">
+                  Buscar y Filtrar
+                </button>
               </li>
-              <li class="contenido_button"><button>Agregar</button></li>
-              <li class="contenido_button"><button>Editar</button></li>
-              <li class="contenido_button"><button>Eliminar</button></li>
+              <li class="contenido_button">
+                <button data-section="agregar-producto">Agregar</button>
+              </li>
+              <li class="contenido_button">
+                <button data-section="editar-producto">Editar</button>
+              </li>
+              <li class="contenido_button">
+                <button data-section="eliminar-producto">Eliminar</button>
+              </li>
             </ul>
           </div>
         </div>
+
         <div class="bloque">
           <h2 class="titulo">Gestión de Inventario</h2>
           <div class="contenido">
             <ul class="contenido_lista">
               <li class="contenido_button">
-                <button>Ajustar Inventario</button>
+                <button data-section="ajustar-inventario">
+                  Ajustar Inventario
+                </button>
               </li>
               <li class="contenido_button">
-                <button>Historial de Cambios</button>
+                <button data-section="historial-cambios">
+                  Historial de Cambios
+                </button>
               </li>
             </ul>
           </div>
         </div>
+
         <div class="bloque">
           <h2 class="titulo">Gestión de Categorías</h2>
           <div class="contenido">
             <ul class="contenido_lista">
               <li class="contenido_button">
-                <button>Listado de Categorías</button>
+                <button data-section="listado-categorias">
+                  Listado de Categorías
+                </button>
               </li>
               <li class="contenido_button">
-                <button>Agregar Categoría</button>
+                <button data-section="agregar-categoria">
+                  Agregar Categoría
+                </button>
               </li>
               <li class="contenido_button">
-                <button>Editar/Eliminar Categorías</button>
+                <button data-section="editar-eliminar-categorias">
+                  Editar/Eliminar Categorías
+                </button>
               </li>
             </ul>
           </div>
         </div>
+
         <div class="bloque">
           <h2 class="titulo">Gestión de Proveedores</h2>
           <div class="contenido">
             <ul class="contenido_lista">
               <li class="contenido_button">
-                <button>Listado de Proveedores</button>
+                <button data-section="listado-proveedores">
+                  Listado de Proveedores
+                </button>
               </li>
               <li class="contenido_button">
-                <button>Agregar/Editar Proveedores</button>
+                <button data-section="agregar-editar-proveedores">
+                  Agregar/Editar Proveedores
+                </button>
               </li>
               <li class="contenido_button">
-                <button>Pedidos a Proveedores</button>
+                <button data-section="pedidos-proveedores">
+                  Pedidos a Proveedores
+                </button>
               </li>
             </ul>
           </div>
         </div>
+
         <div class="bloque">
           <h2 class="titulo">Gestión de Ventas</h2>
           <div class="contenido">
             <ul class="contenido_lista">
               <li class="contenido_button">
-                <button>Historial de Ventas</button>
+                <button data-section="historial-ventas">
+                  Historial de Ventas
+                </button>
               </li>
               <li class="contenido_button">
-                <button>Buscar y Filtrar Ventas</button>
+                <button data-section="buscar-filtrar-ventas">
+                  Buscar y Filtrar Ventas
+                </button>
               </li>
               <li class="contenido_button">
-                <button>Detalles de Venta</button>
+                <button data-section="detalles-venta">Detalles de Venta</button>
               </li>
             </ul>
           </div>
         </div>
+
         <div class="bloque">
           <h2 class="titulo">Gestión de Usuarios</h2>
           <div class="contenido">
             <ul class="contenido_lista">
               <li class="contenido_button">
-                <button>Listado de Usuarios</button>
+                <button data-section="listado-usuarios">
+                  Listado de Usuarios
+                </button>
               </li>
               <li class="contenido_button">
-                <button>Agregar/Editar Usuarios</button>
+                <button data-section="agregar-editar-usuarios">
+                  Agregar/Editar Usuarios
+                </button>
               </li>
               <li class="contenido_button">
-                <button>Roles y Permisos</button>
+                <button data-section="roles-permisos">Roles y Permisos</button>
               </li>
             </ul>
           </div>
         </div>
+
         <div class="bloque">
           <h2 class="titulo">Gestión de Métodos de Pago</h2>
           <div class="contenido">
             <ul class="contenido_lista">
               <li class="contenido_button">
-                <button>Agregar/Editar Métodos de Pago</button>
+                <button data-section="agregar-editar-metodos-pago">
+                  Agregar/Editar Métodos de Pago
+                </button>
               </li>
               <li class="contenido_button">
-                <button>Historial de Métodos de Pago Utilizados</button>
+                <button data-section="historial-metodos-pago">
+                  Historial de Métodos de Pago Utilizados
+                </button>
               </li>
             </ul>
           </div>
         </div>
+
         <div class="bloque">
           <h2 class="titulo">Alertas y Notificaciones</h2>
           <div class="contenido">
             <ul class="contenido_lista">
               <li class="contenido_button">
-                <button>Alertas de Stock Bajo</button>
+                <button data-section="alertas-stock-bajo">
+                  Alertas de Stock Bajo
+                </button>
               </li>
               <li class="contenido_button">
-                <button>Alertas de Pedidos</button>
+                <button data-section="alertas-pedidos">
+                  Alertas de Pedidos
+                </button>
               </li>
             </ul>
           </div>
         </div>
+
         <div class="bloque">
-          <h2 class="titulo">Configuaración</h2>
+          <h2 class="titulo">Configuración</h2>
           <div class="contenido">
             <ul class="contenido_lista">
-              <li class="contenido_button"><button>Configuración</button></li>
+              <li class="contenido_button">
+                <button data-section="configuracion">Configuración</button>
+              </li>
             </ul>
           </div>
         </div>
       </div>
     </aside>
-    <main></main>
+    <main class="contenedor_seccion">
+      <section id="resumen-ventas" class="seccion">
+        <div class="contenedor_tabla_resumen_ventas">
+          <table class="tabla_resumen_ventas tabla_resumen_ventas-sm">
+            <thead>
+              <tr>
+                <td>id</td>
+                <td>Fecha</td>
+                <td>Usuario</td>
+                <td>Metodo de pago</td>
+                <td>Total venta</td>
+              </tr>
+            </thead>
+          </table>
+        </div>
+      </section>
+      <section id="inventario-critico" class="seccion ocultar">
+        Contenido de Inventario Crítico
+      </section>
+      <section id="buscar" class="seccion ocultar">Contenido de Buscar</section>
+      <section id="ultimas-actividades" class="seccion ocultar">
+        Contenido de Últimas Actividades
+      </section>
+
+      <section id="buscar-filtrar-productos" class="seccion ocultar">
+        Contenido de Buscar y Filtrar Productos
+      </section>
+      <section id="agregar-producto" class="seccion ocultar">
+        Contenido de Agregar Producto
+      </section>
+      <section id="editar-producto" class="seccion ocultar">
+        Contenido de Editar Producto
+      </section>
+      <section id="eliminar-producto" class="seccion ocultar">
+        Contenido de Eliminar Producto
+      </section>
+
+      <section id="ajustar-inventario" class="seccion ocultar">
+        Contenido de Ajustar Inventario
+      </section>
+      <section id="historial-cambios" class="seccion ocultar">
+        Contenido de Historial de Cambios
+      </section>
+
+      <section id="listado-categorias" class="seccion ocultar">
+        Contenido de Listado de Categorías
+      </section>
+      <section id="agregar-categoria" class="seccion ocultar">
+        Contenido de Agregar Categoría
+      </section>
+      <section id="editar-eliminar-categorias" class="seccion ocultar">
+        Contenido de Editar/Eliminar Categorías
+      </section>
+
+      <section id="listado-proveedores" class="seccion ocultar">
+        Contenido de Listado de Proveedores
+      </section>
+      <section id="agregar-editar-proveedores" class="seccion ocultar">
+        Contenido de Agregar/Editar Proveedores
+      </section>
+      <section id="pedidos-proveedores" class="seccion ocultar">
+        Contenido de Pedidos a Proveedores
+      </section>
+
+      <section id="historial-ventas" class="seccion ocultar">
+        Contenido de Historial de Ventas
+      </section>
+      <section id="buscar-filtrar-ventas" class="seccion ocultar">
+        Contenido de Buscar y Filtrar Ventas
+      </section>
+      <section id="detalles-venta" class="seccion ocultar">
+        Contenido de Detalles de Venta
+      </section>
+
+      <section id="listado-usuarios" class="seccion ocultar">
+        Contenido de Listado de Usuarios
+      </section>
+      <section id="agregar-editar-usuarios" class="seccion ocultar">
+        Contenido de Agregar/Editar Usuarios
+      </section>
+      <section id="roles-permisos" class="seccion ocultar">
+        Contenido de Roles y Permisos
+      </section>
+
+      <section id="agregar-editar-metodos-pago" class="seccion ocultar">
+        Contenido de Agregar/Editar Métodos de Pago
+      </section>
+      <section id="historial-metodos-pago" class="seccion ocultar">
+        Contenido de Historial de Métodos de Pago Utilizados
+      </section>
+
+      <section id="alertas-stock-bajo" class="seccion ocultar">
+        Contenido de Alertas de Stock Bajo
+      </section>
+      <section id="alertas-pedidos" class="seccion ocultar">
+        Contenido de Alertas de Pedidos
+      </section>
+
+      <section id="configuracion" class="seccion ocultar">
+        Contenido de Configuración
+      </section>
+    </main>
     <footer></footer>
   </body>
   <script src="../src/js/admin.js"></script>

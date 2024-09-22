@@ -1,0 +1,47 @@
+.barra_lateral {
+  padding: 10px 5px;
+  background-color: var(--blanco);
+  position: absolute;
+  right: -300px;
+  width: 300px;
+  height: 100%;
+  user-select: none;
+  z-index: 9999;
+
+  transition: all 0.3s linear;
+  .encabezado {
+    font-size: 2rem;
+    color: var(--negro);
+    font-weight: 500;
+    padding: 10px 5px;
+  }
+  .button_menu {
+    position: absolute;
+    color: var(--negro);
+    width: 50px;
+    left: -50px;
+    font-size: 2rem;
+
+    transition: all 0.2s linear;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+    &:active {
+      transform: scale(0.9);
+    }
+  }
+}
+
+.barra_lateral.show {
+  transform: translateX(-300px);
+  .button_menu.show {
+    transform: rotate(-90deg);
+    &:hover {
+      transform: scale(1.1) rotate(-90deg);
+    }
+    &:active {
+      transform: scale(0.9) rotate(-90deg);
+    }
+  }
+}
