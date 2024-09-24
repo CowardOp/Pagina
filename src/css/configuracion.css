@@ -1,3 +1,9 @@
+.barra_navegacion {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
 .estilo_imagen {
     width: 80px;
 
