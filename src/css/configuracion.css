@@ -5,6 +5,12 @@ header {
     display: flex;
     flex-direction: row;
     border-radius: 1%;
+    height: auto;
+}
+
+.imagen_encabezado {
+    width: 100px;
+    /*object-fit: cover;*/
 }
 
 ul {
@@ -12,7 +18,7 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #80bcbd;
+    background-color: #0d6669;
     display: flex;
     flex-direction: row;
 }
@@ -22,10 +28,15 @@ li a {
     display: block;
     color: white;
     text-align: center;
-    padding: 6px 8px;
+    padding: 30px 40px;
     text-decoration: none;
+    font-weight: 700;
+
 }
 
-.imagen_encabezado {
-    width: 100px;
+li:hover {
+    background-color: black;
+    transform: scale(1.1);
+    transition: all 0.3s ease;
+
 }
