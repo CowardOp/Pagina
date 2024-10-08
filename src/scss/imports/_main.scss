@@ -1,17 +1,19 @@
 .contenedor_seccion {
+  position: absolute;
+  width: 100%;
   background-color: var(--blanco-gris);
   .seccion {
     background-color: var(--blanco-gris);
     color: var(--negro);
     position: absolute;
     width: 100%;
-    height: 100vh;
-    left: 0px;
+    right: 0px;
 
     transition: all 0.5s linear;
   }
 }
 
 .seccion.ocultar {
-  transform: translateX(-1500px);
+  position: absolute;
+  transform: translateX(-3500px);
 }

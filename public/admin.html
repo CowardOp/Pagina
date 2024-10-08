@@ -113,30 +113,6 @@
       </div>
       <div class="acordeon">
         <div class="bloque">
-          <h2 class="titulo">Panel de Control</h2>
-          <div class="contenido">
-            <ul class="contenido_lista">
-              <li class="contenido_button">
-                <button data-section="resumen-ventas">Resumen de Ventas</button>
-              </li>
-              <li class="contenido_button">
-                <button data-section="inventario-critico">
-                  Inventario Crítico
-                </button>
-              </li>
-              <li class="contenido_button">
-                <button data-section="buscar">Buscar</button>
-              </li>
-              <li class="contenido_button">
-                <button data-section="ultimas-actividades">
-                  Últimas Actividades
-                </button>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="bloque">
           <h2 class="titulo">Gestión de Productos</h2>
           <div class="contenido">
             <ul class="contenido_lista">
@@ -163,14 +139,9 @@
           <div class="contenido">
             <ul class="contenido_lista">
               <li class="contenido_button">
-                <button data-section="ajustar-inventario">
-                  Ajustar Inventario
-                </button>
-              </li>
-              <li class="contenido_button">
-                <button data-section="historial-cambios">
-                  Historial de Cambios
-                </button>
+                <a class="w-full" href="./inventory.html"
+                  ><button>Ir a Inventario</button></a
+                >
               </li>
             </ul>
           </div>
@@ -305,37 +276,18 @@
           <div class="contenido">
             <ul class="contenido_lista">
               <li class="contenido_button">
-                <button data-section="configuracion">Configuración</button>
+                <a href="./configuracion.html"
+                  ><button data-section="configuracion">
+                    Configuración
+                  </button></a
+                >
               </li>
             </ul>
           </div>
         </div>
       </div>
     </aside>
-    <main class="contenedor_seccion">
-      <section id="resumen-ventas" class="seccion">
-        <div class="contenedor_tabla_resumen_ventas">
-          <table class="tabla_resumen_ventas tabla_resumen_ventas-sm">
-            <thead>
-              <tr>
-                <td>id</td>
-                <td>Fecha</td>
-                <td>Usuario</td>
-                <td>Metodo de pago</td>
-                <td>Total venta</td>
-              </tr>
-            </thead>
-          </table>
-        </div>
-      </section>
-      <section id="inventario-critico" class="seccion ocultar">
-        Contenido de Inventario Crítico
-      </section>
-      <section id="buscar" class="seccion ocultar">Contenido de Buscar</section>
-      <section id="ultimas-actividades" class="seccion ocultar">
-        Contenido de Últimas Actividades
-      </section>
-
+    <!-- <main class="contenedor_seccion">
       <section id="buscar-filtrar-productos" class="seccion ocultar">
         Contenido de Buscar y Filtrar Productos
       </section>
@@ -349,16 +301,6 @@
         Contenido de Eliminar Producto
       </section>
 
-      <section id="ajustar-inventario" class="seccion ocultar">
-        Contenido de Ajustar Inventario
-      </section>
-      <section id="historial-cambios" class="seccion ocultar">
-        Contenido de Historial de Cambios
-      </section>
-
-      <section id="listado-categorias" class="seccion ocultar">
-        Contenido de Listado de Categorías
-      </section>
       <section id="agregar-categoria" class="seccion ocultar">
         Contenido de Agregar Categoría
       </section>
@@ -409,12 +351,8 @@
       <section id="alertas-pedidos" class="seccion ocultar">
         Contenido de Alertas de Pedidos
       </section>
-
-      <section id="configuracion" class="seccion ocultar">
-        Contenido de Configuración
-      </section>
-    </main>
-    <footer></footer>
+    </main> -->
+    <!-- <footer></footer> -->
   </body>
   <script src="../src/js/admin.js"></script>
 </html>
