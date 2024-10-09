@@ -9,6 +9,7 @@
   align-items: center;
   width: 30%;
   background-color: #fff;
+  z-index: 9999;
 }
 
 .encabezado h1 {
@@ -62,14 +63,30 @@
   transform: scale(1.2);
 }
 
+.opciones_navegador-ul button.ocultar {
+  transform: rotate(180deg);
+}
+
 .lista_opciones {
   padding: 10px;
   background-color: #000;
   position: absolute;
   top: 65px;
+  z-index: -1;
   border-radius: 5px;
 
   transition: all 1s ease;
+}
+
+.lista_opciones li {
+  border-radius: 5px;
+
+  transition: all 0.3s;
+}
+
+.lista_opciones li:hover {
+  background-color: #fff;
+  color: #000;
 }
 
 .lista_opciones.ocultar {
