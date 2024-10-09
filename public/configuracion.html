@@ -1,31 +1,56 @@
 <!DOCTYPE html>
 <html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Configuración de usuario</title>
-    <link rel="stylesheet" href="../src/css/configuracion.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../src/css/configuracion.css" />
+    <link rel="stylesheet" href="../src/css/main.css" />
+  </head>
 
-</head>
-
-<body>
+  <body>
     <header>
-        <img class="imagen_encabezado"
+      <nav class="navegador">
+        <div class="encabezado">
+          <img
+            class="imagen_encabezado"
             src="https://static.vecteezy.com/system/resources/previews/008/844/895/non_2x/user-icon-design-free-png.png"
-            alt="logo">
-        <h1>Configuración de usuario</h1>
-        <ul>
-            <li> <a href="Cambio Perfil Usuario">Cambio perfil de usuario</a></li>
-            <li> <a href="Cambio nombre de usuario">Cambio nombre de usuario</a></li>
-            <li> <a href="Cambio numero de contacto">Cambio número de contacto</a></li>
-            <li> <a href="Cambio correo electronico">Cambio correo electrónico</a></li>
-            <li> <a href="Cambio imagen de perfil">Cambio imagen de perfil</a></li>
-            <li> <a href="Cambio de clave">Cambio de clave</a></li>
-        </ul>
-
+            alt="logo"
+          />
+          <h1 class="text-lg font-bold">Configuración de usuario</h1>
+        </div>
+        <div class="opciones_navegador">
+          <ul class="opciones_navegador-ul">
+            <li>
+              Cambio perfil de usuario
+              <button class="fa-solid fa-down-long"></button>
+            </li>
+            <ul class="lista_opciones ocultar">
+              <li>
+                <a href="Cambio nombre de usuario">Cambio nombre de usuario</a>
+              </li>
+              <li>
+                <a href="Cambio numero de contacto"
+                  >Cambio número de contacto</a
+                >
+              </li>
+              <li>
+                <a href="Cambio correo electronico"
+                  >Cambio correo electrónico</a
+                >
+              </li>
+              <li>
+                <a href="Cambio imagen de perfil">Cambio imagen de perfil</a>
+              </li>
+              <li><a href="Cambio de clave">Cambio de clave</a></li>
+            </ul>
+          </ul>
+        </div>
+      </nav>
     </header>
-
-</body>
-
+  </body>
 </html>
