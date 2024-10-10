@@ -18,10 +18,6 @@ module.exports = {
           info: "#00a1fe",
 
           success: "#3d7e00",
-
-          warning: "#fe5500",
-
-          error: "#ff86a5",
         },
       },
     ],

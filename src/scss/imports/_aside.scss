@@ -17,33 +17,36 @@
     font-weight: 500;
     padding: 10px 5px;
   }
-  .button_menu {
-    position: absolute;
-    color: var(--negro);
-    width: 50px;
-    left: -50px;
-    font-size: 2rem;
+}
 
-    transition: all 0.2s linear;
+.button_menu {
+  position: absolute;
+  color: var(--negro);
+  width: 50px;
+  right: 0px;
+  font-size: 2rem;
+  z-index: 9999;
 
-    &:hover {
-      transform: scale(1.2);
-    }
-    &:active {
-      transform: scale(0.9);
-    }
+  transition: all 0.3s linear;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+  &:active {
+    transform: scale(0.9);
   }
 }
 
+.button_menu.show {
+  transform: rotate(-90deg);
+  right: 300px;
+  &:hover {
+    transform: scale(1.1) rotate(-90deg);
+  }
+  &:active {
+    transform: scale(0.9) rotate(-90deg);
+  }
+}
 .barra_lateral.show {
   transform: translateX(-300px);
-  .button_menu.show {
-    transform: rotate(-90deg);
-    &:hover {
-      transform: scale(1.1) rotate(-90deg);
-    }
-    &:active {
-      transform: scale(0.9) rotate(-90deg);
-    }
-  }
 }

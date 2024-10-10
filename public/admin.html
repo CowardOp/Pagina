@@ -104,10 +104,10 @@
       </div>
     </div>
 
+    <button id="buttonBarra" class="button_menu">
+      <i class="fa-solid fa-caret-down"></i>
+    </button>
     <aside id="barraLateral" class="barra_lateral">
-      <button id="buttonBarra" class="button_menu">
-        <i class="fa-solid fa-caret-down"></i>
-      </button>
       <div class="encabezado">
         <h1>Menu Principal</h1>
       </div>
@@ -123,12 +123,6 @@
               </li>
               <li class="contenido_button">
                 <button data-section="agregar-producto">Agregar</button>
-              </li>
-              <li class="contenido_button">
-                <button data-section="editar-producto">Editar</button>
-              </li>
-              <li class="contenido_button">
-                <button data-section="eliminar-producto">Eliminar</button>
               </li>
             </ul>
           </div>
@@ -207,9 +201,6 @@
                   Buscar y Filtrar Ventas
                 </button>
               </li>
-              <li class="contenido_button">
-                <button data-section="detalles-venta">Detalles de Venta</button>
-              </li>
             </ul>
           </div>
         </div>
@@ -242,11 +233,6 @@
               <li class="contenido_button">
                 <button data-section="agregar-editar-metodos-pago">
                   Agregar/Editar Métodos de Pago
-                </button>
-              </li>
-              <li class="contenido_button">
-                <button data-section="historial-metodos-pago">
-                  Historial de Métodos de Pago Utilizados
                 </button>
               </li>
             </ul>
@@ -289,23 +275,234 @@
     </aside>
     <main class="contenedor_seccion">
       <section id="buscar-filtrar-productos" class="seccion ocultar">
-        Contenido de Buscar y Filtrar Productos
+        <div>
+          <label class="input input-sm input-bordered flex items-center gap-2">
+            <input
+              type="text"
+              class="grow"
+              placeholder="Search"
+              id="searchInput"
+              autocomplete="none"
+            />
+          </label>
+        </div>
+        <div class="overflow-x-auto">
+          <table class="table" id="productTable">
+            <!-- head -->
+            <thead>
+              <tr>
+                <th></th>
+                <th>Nombre</th>
+                <th>Precio</th>
+                <th>Categoria</th>
+                <th>Unidad</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>1</th>
+                <td>Tomates</td>
+                <td>$5500</td>
+                <td>Verdura</td>
+                <td>Kg</td>
+              </tr>
+              <tr>
+                <th>2</th>
+                <td>Cebolla</td>
+                <td>$3500</td>
+                <td>Verdura</td>
+                <td>Kg</td>
+              </tr>
+              <!-- Agrega más filas aquí si es necesario -->
+            </tbody>
+          </table>
+        </div>
       </section>
+
       <section id="agregar-producto" class="seccion ocultar">
-        Contenido de Agregar Producto
+        <div class="card bg-base-100 w-[500px] shrink-0 shadow-2xl">
+          <form action="" id="formNuevo" class="card-body">
+            <h1 class="text-3xl font-bold">Agregar Producto</h1>
+            <div class="form-control">
+              <label class="label">
+                <span class="label-text">Nombre del producto</span>
+              </label>
+              <input
+                name="name"
+                id="name"
+                type="text"
+                placeholder="Nombre producto"
+                class="input input-bordered"
+                required
+                autocomplete="none"
+              />
+            </div>
+            <div class="form-control">
+              <label class="label">
+                <span class="label-text">Precio</span>
+              </label>
+              <input
+                name="price"
+                id="price"
+                type="number"
+                placeholder="$-"
+                class="input input-bordered"
+                required
+              />
+            </div>
+            <div class="form-control">
+              <label class="label">
+                <span class="label-text">Stock</span>
+              </label>
+              <input
+                name="stock"
+                id="stock"
+                type="number"
+                placeholder="Stock"
+                class="input input-bordered"
+                required
+              />
+            </div>
+            <div class="form-control">
+              <label class="label">
+                <span class="label-text">Categoria</span>
+              </label>
+              <select
+                class="select select-bordered"
+                name="categoria"
+                id="categoryId"
+              >
+                <option class="text-white" disabled selected>
+                  Seleccione una categoria
+                </option>
+                <option value="verdura">Verdura</option>
+              </select>
+            </div>
+            <div class="form-control">
+              <label class="label">
+                <span class="label-text">Unidad</span>
+              </label>
+              <select class="select select-bordered" name="unidad" id="unityId">
+                <option class="text-white" disabled selected>
+                  Seleccione una unidad
+                </option>
+                <option value="kilogramo">Kg</option>
+              </select>
+            </div>
+            <div class="form-control mt-6">
+              <button
+                type="button"
+                onclick="nuevoProducto();"
+                class="btn btn-primary"
+              >
+                Agregar
+              </button>
+            </div>
+          </form>
+        </div>
       </section>
-      <section id="editar-producto" class="seccion ocultar">
-        Contenido de Editar Producto
-      </section>
-      <section id="eliminar-producto" class="seccion ocultar">
-        Contenido de Eliminar Producto
+
+      <section id="listado-categorias" class="seccion ocultar">
+        <div class="overflow-x-auto">
+          <table class="table" id="productTable">
+            <!-- head -->
+            <thead>
+              <tr>
+                <th></th>
+                <th>Nombre</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>1</th>
+                <td>Verduras</td>
+              </tr>
+              <tr>
+                <th>2</th>
+                <td>Frutas</td>
+              </tr>
+              <!-- Agrega más filas aquí si es necesario -->
+            </tbody>
+          </table>
+        </div>
       </section>
 
       <section id="agregar-categoria" class="seccion ocultar">
-        Contenido de Agregar Categoría
+        <div class="card bg-base-100 w-[500px] shrink-0 shadow-2xl">
+          <form action="" id="formNuevo" class="card-body">
+            <h1 class="text-3xl font-bold">Agregar Categoria</h1>
+            <div class="form-control">
+              <label class="label">
+                <span class="label-text">Nombre del Categoria</span>
+              </label>
+              <input
+                name="name"
+                id="name"
+                type="text"
+                placeholder="Nombre producto"
+                class="input input-bordered"
+                required
+                autocomplete="none"
+              />
+            </div>
+
+            <div class="form-control mt-6">
+              <button
+                type="button"
+                onclick="nuevoProducto();"
+                class="btn btn-primary"
+              >
+                Agregar
+              </button>
+            </div>
+          </form>
+        </div>
       </section>
       <section id="editar-eliminar-categorias" class="seccion ocultar">
-        Contenido de Editar/Eliminar Categorías
+        <div class="card bg-base-100 w-[500px] shrink-0 shadow-2xl">
+          <form action="" id="formNuevo" class="card-body">
+            <h1 class="text-3xl font-bold">Editar o Eliminar Categoria</h1>
+            <div class="form-control">
+              <label class="label">
+                <span class="label-text">Categoria</span>
+              </label>
+              <select
+                class="select select-bordered"
+                name="categoria"
+                id="categoryId"
+              >
+                <option class="text-white" disabled selected>
+                  Seleccione una categoria
+                </option>
+                <option value="verdura">Verdura</option>
+              </select>
+            </div>
+            <div class="form-control">
+              <label class="label">
+                <span class="label-text">Nombre Categoria</span>
+              </label>
+              <input
+                name="name"
+                999
+                id="name"
+                type="text"
+                placeholder="Nombre producto"
+                class="input input-bordered"
+                required
+                autocomplete="none"
+              />
+            </div>
+
+            <div class="flex flex-row gap-4 form-control mt-6">
+              <button type="button" class="w-2/5 btn btn-warning">
+                Editar
+              </button>
+              <button type="button" class="w-2/5 btn btn-error">
+                Eliminar
+              </button>
+            </div>
+          </form>
+        </div>
       </section>
 
       <section id="listado-proveedores" class="seccion ocultar">

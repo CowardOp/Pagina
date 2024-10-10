@@ -67,3 +67,31 @@ buttons.forEach((button) => {
     activeSection = newSection;
   });
 });
+
+//filtra en la tabla de productos
+document.getElementById("searchInput").addEventListener("input", function () {
+  const filter = this.value.toLowerCase();
+  const table = document.getElementById("productTable");
+  const rows = table.getElementsByTagName("tr");
+
+  for (let i = 1; i < rows.length; i++) {
+    // Empieza desde 1 para omitir el encabezado
+    const row = rows[i];
+    const cells = row.getElementsByTagName("td");
+    let match = false;
+
+    // Recorre las celdas de cada fila y verifica si alguna coincide con el filtro
+    for (let j = 0; j < cells.length; j++) {
+      if (cells[j]) {
+        const textValue = cells[j].textContent || cells[j].innerText;
+        if (textValue.toLowerCase().indexOf(filter) > -1) {
+          match = true;
+          break;
+        }
+      }
+    }
+
+    // Muestra u oculta la fila según si coincide con el filtro
+    row.style.display = match ? "" : "none";
+  }
+});
