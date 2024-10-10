@@ -35,11 +35,11 @@
         transition: all 0.3s linear;
       }
       select {
-        background-color: var(--blanco-gris);
+        background-color: var(--blanco-input);
       }
       input {
         color: var(--negro);
-        background-color: var(--blanco-gris);
+        background-color: var(--blanco-input);
       }
     }
   }

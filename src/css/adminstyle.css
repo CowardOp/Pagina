@@ -8,6 +8,7 @@
   --borde-negro: #00000050;
   --transition: all 0.2s linear;
   --marcado: rgb(127, 195, 255);
+  --blanco-input: #f4f6ff;
   --tipo-principal: "Carlito", sans-serif;
 }
 
@@ -17,6 +18,7 @@
   --blanco-gris: #232d3f;
   --sombra-ppal: #242424;
   --sombra-sec: #3c3c3c;
+  --blanco-input: #0b192c;
   --borde-negro: #ffffff50;
 }
 
@@ -53,11 +55,11 @@
   transition: all 0.3s linear;
 }
 .contenedor_seccion .seccion div select {
-  background-color: var(--blanco-gris);
+  background-color: var(--blanco-input);
 }
 .contenedor_seccion .seccion div input {
   color: var(--negro);
-  background-color: var(--blanco-gris);
+  background-color: var(--blanco-input);
 }
 
 .seccion.ocultar {
@@ -156,7 +158,7 @@
   padding: 0;
   height: 0;
   overflow: hidden;
-  transition: all 0.5s linear;
+  transition: all 0.2s linear;
 }
 .acordeon .bloque .contenido .contenido_lista {
   display: flex;
