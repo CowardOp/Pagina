@@ -67,9 +67,11 @@
   transform: translateX(-3500px);
 }
 
+.input_buscar {
+  width: 30%;
+}
 .input_buscar label {
   background-color: var(--blanco-input);
-  width: 30%;
 }
 
 .barra_lateral {
