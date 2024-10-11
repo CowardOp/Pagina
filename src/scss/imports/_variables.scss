@@ -6,23 +6,10 @@
   --sombra-sec: #ffffff;
   --borde-negro: #00000050;
   --transition: all 0.2s linear;
-  --marcado: rgb(127, 195, 255);
   --blanco-input: #f4f6ff;
 
   --tipo-principal: "Carlito", sans-serif;
 }
-
-// @media (prefers-color-scheme: dark) {
-//   :root {
-//     --negro: #ececec;
-//     --blanco: #303030;
-//     --blanco-gris: #232d3f;
-//     --sombra-ppal: #242424;
-//     --sombra-sec: #3c3c3c;
-
-//     --borde-negro: #ffffff50;
-//   }
-// }
 
 .dark-mode {
   --negro: #ececec;
@@ -34,3 +21,14 @@
 
   --borde-negro: #ffffff50;
 }
+// @media (prefers-color-scheme: dark) {
+//   :root {
+//     --negro: #ececec;
+//     --blanco: #303030;
+//     --blanco-gris: #232d3f;
+//     --sombra-ppal: #242424;
+//     --sombra-sec: #3c3c3c;
+
+//     --borde-negro: #ffffff50;
+//   }
+// }
