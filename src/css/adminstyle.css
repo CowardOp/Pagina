@@ -39,14 +39,13 @@
   padding: 25px 30px;
   transition: all 0.3s linear;
 }
-.contenedor_seccion .seccion table {
-  border-radius: 5px;
-}
 .contenedor_seccion .seccion table thead {
   color: var(--negro);
   transition: all 0.3s linear;
 }
 .contenedor_seccion .seccion div {
+  border-radius: 5px;
+  padding: 5px;
   background-color: var(--blanco);
   color: var(--negro);
   transition: all 0.3s linear;
@@ -68,6 +67,7 @@
 }
 
 .input_buscar {
+  background-color: var(--blanco-gris) !important;
   width: 30%;
 }
 .input_buscar label {

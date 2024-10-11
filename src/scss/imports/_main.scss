@@ -19,13 +19,14 @@
     transition: all 0.3s linear;
 
     table {
-      border-radius: 5px;
       thead {
         color: var(--negro);
         transition: all 0.3s linear;
       }
     }
     div {
+      border-radius: 5px;
+      padding: 5px;
       background-color: var(--blanco);
       color: var(--negro);
       transition: all 0.3s linear;
@@ -50,6 +51,7 @@
 }
 
 .input_buscar {
+  background-color: var(--blanco-gris) !important;
   width: 30%;
   label {
     background-color: var(--blanco-input);
