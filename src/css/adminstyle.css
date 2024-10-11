@@ -35,11 +35,12 @@
   position: absolute;
   width: 90%;
   left: 0;
+  border-radius: 5px;
   padding: 25px 30px;
   transition: all 0.3s linear;
 }
-.contenedor_seccion .seccion label {
-  width: 30%;
+.contenedor_seccion .seccion table {
+  border-radius: 5px;
 }
 .contenedor_seccion .seccion table thead {
   color: var(--negro);
@@ -59,12 +60,16 @@
 }
 .contenedor_seccion .seccion div input {
   color: var(--negro);
-  background-color: var(--blanco-input);
 }
 
 .seccion.ocultar {
   position: absolute;
   transform: translateX(-3500px);
+}
+
+.input_buscar label {
+  background-color: var(--blanco-input);
+  width: 30%;
 }
 
 .barra_lateral {

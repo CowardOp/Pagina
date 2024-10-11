@@ -12,14 +12,14 @@
     position: absolute;
     width: 90%;
     left: 0;
+    border-radius: 5px;
+
     padding: 25px 30px;
 
     transition: all 0.3s linear;
 
-    label {
-      width: 30%;
-    }
     table {
+      border-radius: 5px;
       thead {
         color: var(--negro);
         transition: all 0.3s linear;
@@ -39,7 +39,6 @@
       }
       input {
         color: var(--negro);
-        background-color: var(--blanco-input);
       }
     }
   }
@@ -48,4 +47,11 @@
 .seccion.ocultar {
   position: absolute;
   transform: translateX(-3500px);
+}
+
+.input_buscar {
+  label {
+    background-color: var(--blanco-input);
+    width: 30%;
+  }
 }
